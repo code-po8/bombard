@@ -28,6 +28,7 @@ DEBUG_MODE = True
 USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
 MAX_WORDS = 1000
 ALERTING = False #toggle alerting on/off
+SKIPPED_EXTENSIONS = ['.pdf',]
 
 #====================#
 #   Custom Methods   #
@@ -42,8 +43,8 @@ def hitURL(url):
 	opener = urllib2.build_opener()
 	
 	#skip pdf files
-	if(url[-4:] == ".pdf"):
-		print "Skipping PDF %s..." % (url)
+	if(url[-4:] in SKIPPED_EXTENSIONS):
+		print "Skipping %s..." % (url)
 		return None
 	
 	
