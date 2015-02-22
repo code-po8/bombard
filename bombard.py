@@ -22,10 +22,10 @@ import re #for regular expressions (regex)
 #===============#
 #   constants   #
 #===============#
-WORD_LIST_FILENAME = "./wordlist.txt" #"./wordlist.txt"
+WORD_LIST_FILENAME = "./wordlist.txt"
 URL_LIST_FILENAME = "./urllist.txt"
 DEBUG_MODE = True
-USER_AGENT = "Mozilla/5.0 (X11; Linux i686; rv:5.0.1) Gecko/20100101 Firefox/5.0.1"
+USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
 MAX_WORDS = 1000
 ALERTING = False #toggle alerting on/off
 
@@ -266,11 +266,6 @@ def meSoSleepy():
 	               100.0,
 	               250.0,
 	               600.0]
-	
-	"""multipliers = [1.0,
-	               5.0,
-	               10.0,
-	               30.0]"""
 	
 	#get the amount of time to wait
 	waitTime = random.random() * random.choice(multipliers)
